@@ -1,0 +1,61 @@
+Protocol - Protocol is a set of rules defined by the group of people who created the protocol (Internet Society). These rules will tell us how things will be transmited over the network. It provides a standerdized way to communited/transmit/interact with different components of the system.
+There we some standard Protocols like 
+
+TCP - Trasmission Control Protocol - Its used when we need a reliable connection over the internet like sending file/data. We cant have that some of the file will be shared and some of them not. So this protocol will take care of this issue. This protocol have some rules which see over how data is transmited over the internet.
+How data is sent - Now if we have 4Gb of file we cannot send it in one go. Why? imagin sending 4gb of file and if the network of the sender cuts off. Now sender has to start again right. and the receriver also will only receive file when senders and receivers network are stable.
+So since we know that ifthe network cuts off data wont be sent. To resolve this issue. Data is sent in form of packets.
+Packets are small chunck of data which will be send one by one. And now even if the network is down we can sent that small packet again.
+
+UDP - User Datagram protocol. its like TCP and has some set of rules but it doesnt care about if the data is transmitted correctly. We can have loss of data here like livestream, video call. Here we want so get all data which is send by the users but we also dont care if we loss some. Like in video call data is sent in form of frames. So if we loss some frame we dont care.
+
+HTTP - Hyper Text Transfer Protocol - It used for communication on World Wide Web WWW. So if we are using anything which basically has WWW we are using HTTP. It has set of rules and check over how data is transmitted over WWW. like if we type google.com it see over how this request is made where its made how will this request reache thee server and how it will come back.
+
+IP - Internet Protocol - This protocol helps in determining that we are sending data to the right receiver. Over the internet everything and every user has IP which is unique to every user/devices that are connected to the internet.It works in conjuction with other protocol like TCP, UDP to make them more reliables.
+So IP is a set rule which establish a unique device over the internet. Like if im connected to the internet i will have an ip address which no one in the world will have. 
+
+Whcih makes my device a unique and easily recognizable by other party. Like phone number. if i have 789 phone number and anyone with my phone number can communicate with me. Similarly i can with them.
+
+Now ip has this structure - x.x.x.x here every "x" can be 0-255 number. the first ip is 0.0.0.0 and last if 255.255.255.255 . Now its really hard to remember all these number are converted into words like google.com or amazon.in . Its really easy to remember website these ways but internally when we use WWW and use this address its get converted into google actula unique ip address. Its like 8.8.8.8
+ www.google.com makes a URL Uniform Resoruce Locator.
+
+Now how do we communicate over the internet? lets say i want to open google.com on my web browser.
+ So now we know what is ip. This ip will be provided by my internet provider like Airtel/BSNL. Once i have this i will make request to google.com. My request will go and this request will get back as response from the server. In this case im client and google.com is server.
+
+Once the request arrives i will see all the webpages. But what if i have 2 device connected to my router or im sharing hotspot on my phone. Now how will the router know where to send this request.
+Internally when we are connected to a router we all have 1 ip. But router makes it in a way which give us a local ip. So if there are many devies conencted each of them will have different local ips. This way the router will remember which device made the request and it will only send that request to that device only. Not anywhere else.
+And this locally assiging distingushing devices is called as NAT - Network Address Translation. 
+The request will have some data attach to it which will tell where the response should go. NAT does that.
+
+Now if i have multiple application like chorome, firefox so now we know how to distiguish a device. But how can we tell which appilcation it cames from. thsi is using ports
+
+Ports- Portes are a logical unique number which is associated with application which distiguise request made from one application to another. There are 2^16 ports we can have its a 16bit number. 
+If we have an application x then we need to set a port on that application which will seperate this application by others.
+We cannot have many application with same port number.
+These port number are like 80 its reserved by HTTP request means we cannot use them and 443 its reserved by HTTPs .
+Ports from 0 - 1023 are reversed and no one can use it.
+ports from 1024 - 49152 are reversed by application the most known applications like MYSQL, MongoDB and all.
+Anything else than that we can use it.
+If we create a port in above range our application cannot run.
+
+LAN - Local area network . these are used in very local area like house, office where devices are connected using a LAN wire for hihg speed data transfer.
+
+MAN - metropolitian Area Network - These are used over cities. its bigger  then LAN but smaller than WAN. and enough LAN connected together it will created into a MAN. These are Telophone Company networks landline, it can be also used to connect differnt goverment netowrd within the city.
+
+WAN - Wide area network , its spread accross countries and it connect the whole world like internet. Internet is example of this.
+There can be another example like private WAN like Amazon AWS its has a private internal WAN spread accross the contries. Which connects them. 
+These use optic fiber cables under the ocean.
+
+Topologies - Topologice refers to arrangment or structor of how different devices are connected to each other or they comminicate with each other.
+There are 5 main topologies.
+BUS - its is where all devices are connected in a single shared communication line. Each device send data on the bus and it reached the receiver. But if the backbone is broker means the communication line then the whole network is down.
+
+Star  - its is where each device is connected to a central hub or switch like our router. If the central hub goes down everything goes down.
+
+Ring - This is where every device is connected to its adject device. So to send the data to a opposited device in this ring. The data needs to be traveled from all of those adjects. Taking so much time to transfer. And if the adjecents are broken. Then the deviec cannot communicate with non adject device. Or will take more time to communicate.
+
+Mesh  - THere every device is connected to every other device. Creating a mesh. Its really fast network but its cost so much. Its cost ineffective. and lets say we want to add another deivce then we need  to connecte again every device to every ohter device. So its not scalable too.
+
+Tree - its a combination of BUS, and star topologies.
+
+
+
