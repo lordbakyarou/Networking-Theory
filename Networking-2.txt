@@ -1,0 +1,23 @@
+OSI model - Open System Interconnection model is a conceptual model which describes how data is transmitted between two network nodes. It contains 7 layers whcih has there own functionality and contribute to this OSI model. 
+Lets take a example of Whatsapp App and how these layers contributes to sending your message to your friend
+
+Application Layer - This layer consist of physical apperance of the application like button, widgets and everything you see. This layer is most closest to the user. In above examples its a whatsapp application and what you see. Where you type and all. Once you have sent the message process if handled to layer below it.
+
+Presentaton Layer - this layer handles the translation of data in a way it can be understand by the application at the receving end. It does data enctyption and decryption. It converts ASCII to EBCDIC. Then after this data conversion a session is created.
+
+Session Layer - This layer handles the establishing of the connection to maintaining the network and terminating the connection between 2 application. So when you pay on flipkart it will create a session page where it will give you a QR or upi id to fill up to conitue the process. This is a session layer in backend. It will terminate on its own then the task is done. Or something wrong goes on.
+
+Transport Layer - This layer takes care of reliable end to end connection. And makes sure all data is send to the other end. This is done bydividing the data into small parts called as segments. This layer will make sure all data is send successfull by assigning Ok checkmark to the segment. TCP/UDP comes here.
+
+Network Layer - This layer determing the best possible routing path for the data to be sent quickly by internally using a routing algorithm. It does by forwading network packets and route them in a best possible way possible.
+This
+
+Data Link Layer - Data link layer is responsible for converting data stream to signals bit by bit and to send that over the underlying hardware. At the receiving end, Data link layer picks up data from hardware which are in the form of electrical signals, assembles them in a recognizable frame format, and hands over to upper layer.
+
+Physical Layer - This layer handles the transmission of 0s and 1s to the actual phycical netowrk using wires and cables.
+Till here everything was in cloud. But now all the data is reached to a physical device and all these data will now be processed by some phycical processor. So sending this data to a physical processor is done by Physical Layer.
+
+
+TCP/IP Model - This is a model which is actually used in real life It cosist of Application Layer, Transport Layer, Netowrk Layer, Data Link Layer, Physical Layer.
+
+ 
